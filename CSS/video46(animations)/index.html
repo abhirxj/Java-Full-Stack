@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container{
+            background-color: blueviolet;
+            width: 80vw;
+            height: 30vh;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+           
+            /* animation-name: abhikaAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: 5;
+            animation-delay: 1s;
+            animation-timing-function: cubic-bezier(0.08, 0.79, 0.36, 0.98);;
+            animation-direction: reverse; */
+
+            animation: abhikaAnimation 3s ease-in-ou    t 1s 5 alternate;
+                    
+             
+
+        }
+           @keyframes abhikaAnimation {
+
+            0% {
+                background-color: red;
+                transform: translateX(0) rotate(0deg);
+            }
+
+            25% {
+                background-color: yellow;
+                transform: translateX(19vw) rotate(90deg);
+            }
+
+            50% {
+                background-color: green;
+                transform: translateX(38vw) rotate(180deg);
+            }
+
+            75% {
+                background-color: orange;
+                transform: translateX(57vw) rotate(270deg);
+            }
+
+            100% {
+                background-color: aqua;
+                transform: translateX(76vw) rotate(360deg);
+            }
+        }
+        /* @keyframes abhikaAnimation
+        {
+            from{
+                background-color: red;
+            }to{
+                background-color: yellow;
+                transform: translateX(76vw);
+            }
+        }    */
+        @keyframes bhoomikaAnimation{
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate       (200deg);
+            }
+            50%{
+                transform: rotate   (220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+ </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
+
+
