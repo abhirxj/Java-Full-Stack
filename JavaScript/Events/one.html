@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: black; color:aliceblue">
+    <h2>Amazing Events</h2>
+    <div id = "images">
+        <ul>
+            <li><img width="200px" id="photoshop" src = "https://imgs.search.brave.com/yp_-zrmx5yaRnhxvDZD911mekC8NWfEHkRLtcz7mjUc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tdmVj/dG9yL2Fkb2JlLXBo/b3Rvc2hvcC1sb2dv/Xzc5ODU3Mi00NDQu/anBnP3NlbXQ9YWlz/X2h5YnJpZCZ3PTc0/MCZxPTgw" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src = "  https://imgs.search.brave.com/wNfdFYeq8MJdgycBgHoF73Fe_bY8zx0lsJa-2CFYG4o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzY1LzIzLzcw/LzM2MF9GXzI2NTIz/NzA5MF9NdXRodmI3/Mm0yUE9ZRmp5eDdG/NVVDUUxoOUpkQnRL/Ti5qcGc  " alt=""></li>
+            <li><img width="200px" id="river" src = " https://imgs.search.brave.com/it2KUEjB20LrKHKmheYVJt4kFxW_Oq5I_c_pNuFQ1Ow/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI1/NDM3ODI4NS9waG90/by90aGUtYXN1emEt/cml2ZXItaW4tdGhl/LWZvcmVncm91bmQt/YW5kLXRoZS1teW9q/aW5kYWtlLW1hc3Np/Zi1pbi10aGUtYmFj/a2dyb3VuZC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9Y05k/Z2tnYk9pYUd3ellU/Q091aUdWMEJBZzRy/ZUFyRy0xMTRoNzVz/TXhJdz0   " alt=""></li>
+            <li><img width="200px" id="owl" src = " https://imgs.search.brave.com/9PRLfWBsa5-_VZlYwPd5IrUjR6d6CaRv-sxSsYD0Usc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vY2xvc2V1cC1w/b3J0cmFpdC1icm93/bi1ibGFjay1vd2wt/cGVyY2hlZC1icmFu/Y2hfODg5MjI3LTkx/ODc5LmpwZz9zZW10/PWFpc19oeWJyaWQm/dz03NDAmcT04MA   " alt="" ></li>
+            <li><img width="200px" id="prayer" src = "   https://imgs.search.brave.com/ZJsXIP-Tyz1RbJcX_FIcTIjJt4VYiZGG4DViFlqkymQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvNTQx/ODMwOC9wZXhlbHMt/cGhvdG8tNTQxODMw/OC5qcGVnP2NzPXRp/bnlzcmdiJmRwcj0x/Jnc9NTAw " alt=""></li>
+            <li><a style="color:aliceblue" href="https:google.com " id = "google">Google</a> </li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Owl Clicked")
+    // }
+
+    //attachEvent()
+    //JQuery - On event listener
+
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clientX, cientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation();
+    // },false)
+
+    
+    //recommended
+    // document.getElementById('google').addEventListener
+    // ('click',function(e){
+    //     e.preventDefault ();
+    //     console.log("google clicked");
+        
+    // })
+
+    document.querySelector('#images').addEventListener
+    ('click', function(e){
+        console.log(e.target.parentNode);
+        if(e.target.tagName === 'IMG')  {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt)
+        
+    },false)
+
+
+//=====passing T/F as 3rd argument in addEventListener()
+    //bubbling -> false -> inside to outside
+    //event capturing ->true -> Event capturing means the event travels from the outermost ancestor toward the target element
+
+</script>
+</html>
